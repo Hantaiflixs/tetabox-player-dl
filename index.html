@@ -600,7 +600,7 @@
         </div>
 
         <div class="developer">
-            Powered by <a href="https://t.me/Farooq_is_king" target="_blank">𝐖𝐎𝐎𝐃𝐜𝐫𝐚𝐟𝐭</a> • Premium Video Streaming Service
+            Powered by <a href="LuxeFlix" target="_blank">LuxeFlix</a> • Premium Video Streaming Service
         </div>
     </div>
 
@@ -733,5 +733,38 @@
             }
         });
     </script>
+    <!-- Popup box -->
+<div id="popup" style="
+  display: none;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border: 2px solid #444;
+  border-radius: 8px;
+  padding: 20px;
+  z-index: 9999;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  text-align: center;
+">
+  <h2>🎉 Join Our Community!</h2>
+  <p><strong>"LuxeFlix"</strong> 👉 <a href="https://t.me/LuxeFlix" target="_blank">Click to Join</a></p>
+  <button onclick="closePopup()" style="margin-top: 10px; padding: 8px 16px;">Close</button>
+</div>
+
+<script>
+  // Show popup only if not shown before
+  window.onload = function () {
+    if (!localStorage.getItem("popupShown")) {
+      document.getElementById("popup").style.display = "block";
+      localStorage.setItem("popupShown", "true");
+    }
+  };
+
+  function closePopup() {
+    document.getElementById("popup").style.display = "none";
+  }
+</script>
 </body>
 </html>
